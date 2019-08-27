@@ -1,0 +1,6 @@
+{
+  "name": "name",
+  "description": "description of this project",
+  "author" : "Klaas Jacob de Vries",
+  "license": ["MIT", "custom"]
+}
