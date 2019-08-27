@@ -11,7 +11,7 @@ target_include_directories({{cookiecutter.name}}
     PUBLIC
       "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
       "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
-      "$<INSTALL_INTERFACE:$<INSTALL_PREFIX>/${CMAKE_INSTALL_INCLUDEDIR}>"
+      "$<INSTALL_INTERFACE:$<INSTALL_PREFIX>/include>"
 )
 
 {% if cookiecutter.dependencies %}
