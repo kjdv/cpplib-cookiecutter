@@ -1,9 +1,16 @@
 #include <sample.hh>
+#include <results/option.hh>
 
-namespace {{cookiecutter.name}} {
+namespace {{cookiecutter.namespace}} {
 
-std::string public_function() {
-  return "hello from a public function";
+namespace {
+results::option<std::string> hello() {
+  return results::make_some<std::string>("hello from a ");
+}
 }
 
-} // namespace {{cookiecutter.name}}
+std::string public_function() {
+  return hello().map([](auto s) { return s + "public function"; }).unwrap();
+}
+
+} // namespace {{cookiecutter.namespace}}

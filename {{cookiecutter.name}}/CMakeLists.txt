@@ -4,8 +4,13 @@ project({{cookiecutter.name}})
 set(CMAKE_CXX_STANDARD 17)
 
 enable_testing()
-find_package(GTest MODULE REQUIRED)
-
+# find_package(GTest MODULE REQUIRED)
+{% if cookiecutter.dependencies %}
+# dependencies:
+{% for dep in cookiecutter.dependencies.split() %}
+find_package({{dep|title}} CONFIG REQUIRED)
+{% endfor %}
+{% endif %}
 add_subdirectory(lib)
 add_subdirectory(test)
 

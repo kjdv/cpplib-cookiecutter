@@ -2,7 +2,7 @@
 #include <internal_sample.hh>
 #include <sample.hh>
 
-namespace {{cookiecutter.name}} {
+namespace {{cookiecutter.namespace}} {
 namespace {
 
 TEST(sample, public_function) {
@@ -14,4 +14,4 @@ TEST(sample, private_function) {
 }
 
 } // namespace
-} // namespace {{cookiecutter.name}}
+} // namespace {{cookiecutter.namespace}}

@@ -11,4 +11,11 @@ target_include_directories({{cookiecutter.name}}
     PUBLIC
       "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
       "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
-      "$<INSTALL_INTERFACE:$<INSTALL_PREFIX>/${CMAKE_INSTALL_INCLUDEDIR}>")
+      "$<INSTALL_INTERFACE:$<INSTALL_PREFIX>/${CMAKE_INSTALL_INCLUDEDIR}>"
+)
+
+{% if cookiecutter.dependencies %}
+target_link_libraries({{cookiecutter.name}}
+    PUBLIC{% for dep in cookiecutter.dependencies.split() %} {{dep|title}}::{{dep}}{% endfor %}
+)
+{% endif %}
