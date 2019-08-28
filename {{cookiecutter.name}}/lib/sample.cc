@@ -1,10 +1,10 @@
 #include <sample.hh>
 #include <results/option.hh>
 
-namespace {{cookiecutter.namespace}} {
+namespace {{cookiecutter.name}} {
 
 std::string public_function() {
   return "hello from a public function";
 }
 
-} // namespace {{cookiecutter.namespace}}
+} // namespace {{cookiecutter.name}}
