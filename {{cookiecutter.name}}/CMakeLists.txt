@@ -16,6 +16,7 @@ find_package({{dep|title}} CONFIG REQUIRED)
 {% endif %}
 add_subdirectory(lib)
 add_subdirectory(test)
+add_subdirectory(examples)
 
 # install rules
 install(TARGETS {{cookiecutter.name}}

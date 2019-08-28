@@ -3,5 +3,6 @@
   "description": "description of this project",
   "author" : "Klaas Jacob de Vries",
   "license": ["MIT", "custom"],
-  "dependencies": ""
+  "dependencies": "",
+  "examples_as_tests": "y"
 }
