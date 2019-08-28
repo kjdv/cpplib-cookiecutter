@@ -1,10 +1,12 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.10)
 
 project({{cookiecutter.name}})
 set(CMAKE_CXX_STANDARD 17)
 
-enable_testing()
+include(GoogleTest)
 find_package(GTest MODULE REQUIRED)
+enable_testing()
+
 {% if cookiecutter.dependencies %}
 # dependencies:
 {% for dep in cookiecutter.dependencies.split() %}

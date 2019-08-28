@@ -1,5 +1,4 @@
 #include <sample.hh>
-#include <results/option.hh>
 
 namespace {{cookiecutter.name}} {
 
