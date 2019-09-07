@@ -20,10 +20,11 @@ add_subdirectory(examples)
 
 # install rules
 install(TARGETS {{cookiecutter.name}}
-        EXPORT {{cookiecutter.name|title}}Config
+        EXPORT {{cookiecutter.name|title}}Targets
         ARCHIVE DESTINATION lib COMPONENT lib
         PUBLIC_HEADER DESTINATION include/{{cookiecutter.name}} COMPONENT dev
 )
+install(FILES {{cookiecutter.name|title}}Config.cmake DESTINATION share/{{cookiecutter.name}})
 
-export(TARGETS {{cookiecutter.name}} NAMESPACE {{cookiecutter.name|title}}:: FILE ${CMAKE_CURRENT_BINARY_DIR}/{{cookiecutter.name|title}}Config.cmake)
-install(EXPORT {{cookiecutter.name|title}}Config DESTINATION share/{{cookiecutter.name}} NAMESPACE {{cookiecutter.name|title}}::)
+install(EXPORT {{cookiecutter.name|title}}Targets DESTINATION share/{{cookiecutter.name}} NAMESPACE {{cookiecutter.name|title}}::)
+export(TARGETS {{cookiecutter.name}} NAMESPACE {{cookiecutter.name|title}}:: FILE ${CMAKE_CURRENT_BINARY_DIR}/{{cookiecutter.name|title}}Targers.cmake)
