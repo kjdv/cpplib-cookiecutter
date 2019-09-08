@@ -27,4 +27,4 @@ install(TARGETS {{cookiecutter.name}}
 install(FILES {{cookiecutter.name|title}}Config.cmake DESTINATION share/{{cookiecutter.name}})
 
 install(EXPORT {{cookiecutter.name|title}}Targets DESTINATION share/{{cookiecutter.name}} NAMESPACE {{cookiecutter.name|title}}::)
-export(TARGETS {{cookiecutter.name}} NAMESPACE {{cookiecutter.name|title}}:: FILE ${CMAKE_CURRENT_BINARY_DIR}/{{cookiecutter.name|title}}Targers.cmake)
+export(TARGETS {{cookiecutter.name}} NAMESPACE {{cookiecutter.name|title}}:: FILE ${CMAKE_CURRENT_BINARY_DIR}/{{cookiecutter.name|title}}Targets.cmake)
